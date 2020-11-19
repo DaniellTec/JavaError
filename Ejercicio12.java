@@ -1,18 +1,18 @@
-package subdivison;
+package ejercicio2;
 
 import java.util.Scanner;
 
-public class Ejercicio12 
+public class cuatroxcinco 
 {
 	
 	public Scanner sc = new Scanner(System.in);
 	public short n, primerNum;
 
-	public Ejercicio12()
+	public cuatroxcinco()
 	
 	{	do
 		{
-			System.out.print("Introduzca Un Número Par Entero Entre 2 & 80000:");
+			System.out.print("Introduzca Un NÃºmero Par Entero Entre 2 & 80000:");
 			n = Short.valueOf(sc.nextLine());
 		} while ((n%2!=0)&&(n<=80000)); //( ( ( (n%2)==1)  && (n>=2) && (n<=80000) ) ) ;  //Solo coge valores pares
 		
@@ -32,20 +32,17 @@ public class Ejercicio12
 	
 	public void Mostrar()
 	{	
-		System.out.println("Número escrito "+n);
-		
-		{	
-			//System.out.println(primerNum);
-			for (byte b=0;b<5;b++)//5 veces
+		System.out.println("NÃºmero escrito "+n);
+		System.out.println("Primera cifra: "+primerNum);	
 				
-		{		
-				short mult = n;
-				mult = (short) (primerNum * 4);
-				System.out.print(mult);
-				
-		}
+     	short primernum = n;
+        System.out.print("Cinco multiplicaciones: ");
+        for (byte b=0;b<5;b++)//5 veces
+    {	primernum = (short) (primernum * 4);
+	    System.out.print(primernum+" ");
+			}
 			
-		}
+		
 	}
 	
 public void Cerrar()
@@ -55,7 +52,7 @@ public void Cerrar()
 	}
 	
 	public static void main (String [] args)
-	{	Ejercicio12 e = new Ejercicio12 ();
+	{	cuatroxcinco e = new cuatroxcinco ();
 		e.Mostrar();
 	}
 }
